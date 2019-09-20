@@ -1,25 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
 
-//  export default function CharacterCard({ image, name, species, location }) {
-//   return (
-//     <div className='character-card'>
-//       <h2>{name}</h2>
-//       <img alt='rick and morty character' src={image} />
-//       <h3>Species: {species}</h3>
-//       <h3>Location: {location}</h3>
-//     </div>
-//   )
-// }
+const CardContainer=styled.div`
+  display: flex;
+  width: 30vw;
+`;
+const Card = styled.div`
+  border: 3px dashed #32CD32;
+  width: 30vw;
+  margin: 20px 0;
+  padding: 10px;
+  color: #8B0000;
+`;
 
 
 const CharacterCard = props => {
-  // console.log(props.name)
   return (
-  <div className='character-card'>
-    <h2>{props.name}</h2>
-    <img alt='rick and morty character' src={props.image} />
-    <h3>Species: {props.species}</h3>
-  </div>
+    <CardContainer>
+      <Card key={props.id}>
+      <img
+        width='100%'
+        src={props.image}
+        alt='rick and morty character'
+      />
+      <h2>{props.name}</h2>
+      <h3>Species: {props.species}</h3>
+      <h3>Location: {props.location}</h3>
+    </Card>
+    </CardContainer>
+    
+
   )
 }
 export default CharacterCard;

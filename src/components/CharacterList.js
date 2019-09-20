@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
+import { NavLink } from 'react-router-dom';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -21,21 +22,16 @@ export default function CharacterList() {
   // console.log(characters)
     
   return (
-    <section className="character-list">
-      {characters.map(character => {
-        // console.log(character)
-        return (
-          // <CharacterCard 
-          //   key={character.id}
-          //   image={character.image}
-          //   name={character.name}
-          //   species={character.species}
-          //   location={character.location}
-          // />
-          <CharacterCard key={character.id} name={character.name} image={character.image} species={character.species} />
+      <div>
+        {characters.map(character => {
+          // console.log(character)
+          return (
+            <CharacterCard key={character.id} name={character.name} image={character.image} species={character.species} location={character.location.name}/>
+          )
+        })}
+        <NavLink to ={'/'}>Home</NavLink>
+      </div>
+      
 
-        )
-      })}
-    </section>
   );
 }
