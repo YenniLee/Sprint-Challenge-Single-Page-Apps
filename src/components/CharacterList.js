@@ -31,7 +31,5 @@ export default function CharacterList() {
         })}
         <NavLink to ={'/'}>Home</NavLink>
       </div>
-      
-
   );
 }

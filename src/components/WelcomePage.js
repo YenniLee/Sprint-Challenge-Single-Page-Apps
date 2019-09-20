@@ -1,10 +1,20 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
+const StyledWelcome= styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; 
+  justify-content: center;
+  margin: 20px;
+  font-size: 2rem;
+  color: #32CD32;
+`;
 export default function WelcomePage() {
   return (
-    <section className="welcome-page">
-      <header>
+    <StyledWelcome>
         <h1>Welcome to the ultimate fan site!</h1>
         <img
           className="main-img"
@@ -12,7 +22,6 @@ export default function WelcomePage() {
           alt="rick"
         />
         <NavLink to ={'/characters'}>List of Characters</NavLink>
-      </header>
-    </section>
+    </StyledWelcome>
   );
 }
