@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client-side routing allows us to create robust single page applications that dynamically change the display without interacting with the server for a page reload, which makes it faster and more seamless when a user navigates the app.
 
 ## Project Set Up
 
