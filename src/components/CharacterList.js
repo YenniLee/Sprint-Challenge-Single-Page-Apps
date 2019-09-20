@@ -23,7 +23,7 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       {characters.map(character => {
-        console.log(character)
+        // console.log(character)
         return (
           // <CharacterCard 
           //   key={character.id}
