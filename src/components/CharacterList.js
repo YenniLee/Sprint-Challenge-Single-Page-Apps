@@ -11,7 +11,7 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array
       axios.get('https://rickandmortyapi.com/api/character/')
       .then(response => {
-        console.log(response.data.results)
+        // console.log(response.data.results)
         setCharacters(response.data.results);
       })
       .catch(err => {
@@ -22,15 +22,18 @@ export default function CharacterList() {
     
   return (
     <section className="character-list">
-      {characters.map((character, index) => {
+      {characters.map(character => {
+        console.log(character)
         return (
-          <CharacterCard 
-            key={index}
-            image={character.image}
-            name={character.name}
-            species={character.species}
-            location={character.location}
-          />
+          // <CharacterCard 
+          //   key={character.id}
+          //   image={character.image}
+          //   name={character.name}
+          //   species={character.species}
+          //   location={character.location}
+          // />
+          <CharacterCard key={character.id} name={character.name} image={character.image} species={character.species} />
+
         )
       })}
     </section>
